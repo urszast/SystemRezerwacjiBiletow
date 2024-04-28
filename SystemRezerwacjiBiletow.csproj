@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MojeBilety.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SL-060521-43530-10.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MojeBilety.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SL-060521-43530-10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.2">
+      <GeneratePathProperty>True</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="PDFsharp" Version="6.0.0" />
+    <PackageReference Include="QuestPDF" Version="2023.12.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>bin\Debug\net7.0-windows\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PotwierdzenieU.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="SystemRezerwacjiBiletow.StrefaAdministratora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemRezerwacjiBiletow"
+        mc:Ignorable="d"
+        Title="Strefa Administratora" Height="450" Width="800">
+    <Grid>
+        <Image Source="/SL-060521-43530-10.jpg" Stretch="UniformToFill"/>
+        <ListBox x:Name="lbZakupioneBilety" Margin="41,62,288,34">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock>
+                    <Run FontWeight="Bold">BILET:</Run>
+                    <Run Text="{Binding IdBiletu}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Imie i Nazwisko:</Run>
+                    <Run Text="{Binding ImieNazwisko}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Email:</Run>
+                    <Run Text="{Binding Email}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Nr telefonu:</Run>
+                    <Run Text="{Binding NrTelefonu}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Rodzaj biletu:</Run>
+                    <Run Text="{Binding Rodzaj, Mode=OneWay}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Kurs:</Run>
+                    <Run Text="{Binding IdKursu}" FontStyle="Italic"/>
+                        </TextBlock>
+                        <TextBlock>
+                    <Run FontWeight="Bold">Data zakupu:</Run>
+                    <Run Text="{Binding DataKupna}" FontStyle="Italic"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Button Content="Sortuj po dacie zakupu" x:Name="BtnDataKupnaSort" HorizontalAlignment="Left" Margin="543,192,0,0" VerticalAlignment="Top" Height="54" Width="219" Click="BtnDataKupnaSort_Click" FontSize="16"/>
+        <Button Content="Sortuj po imieniu i nazwisku" x:Name="BtnImieNazwiskoSort" HorizontalAlignment="Left" Margin="543,126,0,0" VerticalAlignment="Top" Height="54" Width="219" Click="BtnImieNazwiskoSort_Click" FontSize="16"/>
+        <Button Content="Sortuj po Id kursu" x:Name="BtnIdKursuSort" HorizontalAlignment="Left" Margin="543,260,0,0" VerticalAlignment="Top" Height="54" Width="219" Click="BtnIdKursuSort_Click" FontSize="16"/>
+        <Button Content="Sortuj po Id biletu" x:Name="BtnIdBiletuSort" HorizontalAlignment="Left" Margin="543,62,0,0" VerticalAlignment="Top" Height="54" Width="219" Click="BtnIdBiletuSort_Click" FontSize="16"/>
+        <Button Content="Powrót na stronę główną" x:Name="BtnPowrotSort" HorizontalAlignment="Left" Margin="555,360,0,0" VerticalAlignment="Top" Height="32" Width="195" Click="BtnPowrot_Click" FontSize="14"/>
+        <Label x:Name="LblZakupioneBilety" Content="Zakupione bilety:" HorizontalAlignment="Left" Margin="41,8,0,0" VerticalAlignment="Top"  Width="235" Height="41" FontSize="24" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

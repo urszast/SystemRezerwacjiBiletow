@@ -1,0 +1,17 @@
+﻿<Window x:Class="SystemRezerwacjiBiletow.Zwrot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemRezerwacjiBiletow"
+        mc:Ignorable="d"
+        Title="Zwrot" Height="350" Width="600">
+    <Grid>
+        <Image Source="/SL-060521-43530-10.jpg" Stretch="UniformToFill"/>
+        <Label Content="Wybierz ID biletu do zwrotu:" HorizontalAlignment="Left" Margin="40,34,0,250" Width="242" RenderTransformOrigin="0.5,0.5"/>
+        <ComboBox x:Name="ZwrotCb" HorizontalAlignment="Left" Height="34" Margin="40,89,0,0" VerticalAlignment="Top" Width="333"/>
+        <Button Content="Potwierdź zwrot" x:Name="ZwrotBtn" HorizontalAlignment="Left" Height="43" Margin="51,141,0,0" VerticalAlignment="Top" Width="113" Click="ZwrotBtn_Click"/>
+        <Button Content="Anuluj" x:Name="PowrotBtn" HorizontalAlignment="Left" Height="43" Margin="206,141,0,0" VerticalAlignment="Top" Width="112" Click="PowrotBtn_Click"/>
+
+    </Grid>
+</Window>

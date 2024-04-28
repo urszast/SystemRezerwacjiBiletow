@@ -1,0 +1,29 @@
+﻿<Window x:Class="SystemRezerwacjiBiletow.ZakupBiletu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemRezerwacjiBiletow"
+        mc:Ignorable="d"
+        Title="ZakupBiletu" Height="500" Width="900">
+    <Grid>
+        <Image Source="/SL-060521-43530-10.jpg" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" x:Name="NazwiskoTb" Height="27" Margin="123,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="342"/>
+        <Label Content="Imię i nazwisko" HorizontalAlignment="Left" Height="26" Margin="28,83,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Height="28" Margin="28,150,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox HorizontalAlignment="Left" x:Name="EmailTb" Height="28" Margin="123,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="342"/>
+        <Label Content="Nr telefonu" HorizontalAlignment="Left" Height="27" Margin="28,224,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Trasa" HorizontalAlignment="Left" Height="27" Margin="28,297,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Data podróży" HorizontalAlignment="Left" Height="46" Margin="538,51,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox HorizontalAlignment="Left" x:Name="TelefonTb" Height="28" Margin="123,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="342"/>
+        <Button Content="Dalej" x:Name="DalejBtn" HorizontalAlignment="Left" Height="50" Margin="595,358,0,0" VerticalAlignment="Top" Width="218" Click="DalejBtn_Click"/>
+        <ComboBox HorizontalAlignment="Left" x:Name ="TrasaCb" Height="26" Margin="123,298,0,0" VerticalAlignment="Top" Width="342" SelectionChanged="TrasaCb_SelectionChanged"/>
+        <Label Content="Rodzaj biletu" HorizontalAlignment="Left" Height="27" Margin="541,230,0,0" VerticalAlignment="Top" Width="83"/>
+        <RadioButton Content="Normalny" x:Name="NRbtn" HorizontalAlignment="Left" Height="21" Margin="644,236,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.53,-0.184"/>
+        <RadioButton Content="Ulgowy" x:Name="URbtn" HorizontalAlignment="Left" Height="21" Margin="749,235,0,0" VerticalAlignment="Top" Width="121"/>
+        <Label Content="Godzina odjazdu" HorizontalAlignment="Left" Height="27" Margin="538,160,0,0" VerticalAlignment="Top" Width="102"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="GodzinaCb" Height="26" Margin="538,192,0,0" VerticalAlignment="Top" Width="317" RenderTransformOrigin="0.394,0.598" SelectionChanged="GodzinaCb_SelectionChanged"/>
+        <DatePicker x:Name="DatePicker" Margin="538,83,45,357" SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+        <Label Content="System rezerwacji biletów firmy Łęcz-Trans" HorizontalAlignment="Center" Height="36" Margin="0,15,0,0" VerticalAlignment="Top" Width="454" FontFamily="Verdana Pro" FontWeight="Bold" FontSize="18"/>
+    </Grid>
+</Window>
